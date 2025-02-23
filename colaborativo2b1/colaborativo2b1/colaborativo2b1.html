@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="estilos.css">
         <link rel="icon" href="img/favicon.ico"> 
         <link rel="stylesheet" href="../css/colaborativo2b1.css">
+        <script defer src="colaborativo2b1.js"></script>
         <title>Practica 1</title>
     </head>
 
@@ -63,37 +64,64 @@
                     <p>Cada Happy Rock es un recordatorio de que la alegría puede encontrarse en las cosas más simples. Decora, comparte y esparce felicidad por donde vayas.</p>
                     
                     <br>
-                    <!--ejemplo de uso de input box para texto-->
-                    <form >
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" placeholder="¡Cuéntanos quién eres!">
-                    </form>
-                    
-                    <br>
-                    <!--ejemplo de uso de input box para contraseñas-->
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="(No es para robar tus piedras">
-                    
-                    <br>
-                    <!--ejemplo de uso de selecciones-->
-                    <label for="Tribu">Tribu:</label>
-                    <select name="Tribu" id="Departamento">
-                        <option value="Pintapiedras">Pintapiedras</option>
-                        <option value="Mensajeros">Mensajeros</option>
-                        <option value="Aventureros ">Aventureros </option>
-                    </select>
 
-                    <br>
-                    <!--ejemplo de uso de radio-->
-                    <label for="pregunta">¿Hoy es un buen día?</label>
-                    <input type="radio" name="respuesta" value="si" id="si">
-                    <label for="si">Si</label>
-                    <input type="radio" name="respuesta" value="no" id="no">
-                    <label for="no">¡Por supuesto!</label>
+                    <section class="formulario-container">
+                        <h3><i>Registro en la Tribu</i></h3>
+                        <form id="miFormulario">
+                            <!-- Nombre -->
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" placeholder="¡Tu identidad mística aquí!">
+                            <span class="error" id="errorNombre"></span>
+
+                            <br>
+                            <!-- Correo Electrónico -->
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" placeholder="happy@mail.com">
+                            <span class="error" id="errorEmail"></span>
+                            
+                            <br>
+                            <!-- Contraseña -->
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" placeholder="(No robaremos tus piedras)">
+                            <span class="error" id="errorPassword"></span>
+                            
+                            <br>
+                            <!--ejemplo de uso de selecciones-->
+                            <!-- Tribu -->
+                            <label for="Tribu">Tribu:</label>
+                            <select name="Tribu" id="Departamento">
+                                <option value="Pintapiedras">Pintapiedras</option>
+                                <option value="Mensajeros">Mensajeros</option>
+                                <option value="Aventureros ">Aventureros </option>
+                            </select>
+                            <span class="error" id="errorTribu"></span>
+
+                            <br>
+                            <!--ejemplo de uso de radio-->
+                            <label for="pregunta">¿Hoy es un buen día?</label>
+                            <input type="radio" name="respuesta" value="si" id="si">
+                            <label for="si">Si</label>
+                            <input type="radio" name="respuesta" value="no" id="no">
+                            <label for="no">¡Por supuesto!</label>
+                            <span class="error" id="errorRadio"></span>
+
+                            <br>
+                            <!--ejemplo de uso de num-->
+                            <label for="sabiduria">¿Cuántos secretos ancestrales conoces?</label>
+                            <input type="number" id="sabiduria" name="sabiduria" min="0" max="100" placeholder="0 al 100">
+                            <span class="error" id="errorSabiduria"></span>
+
+                            <br>
+                            <!-- Botón de Envío -->
+                            <button type="submit" class="btn-enviar"> Enviar </button>
+
+                        </form>
+                    </section>
+                            
+
 
                 </article>
             </section>
-
 
             <!--se usa aside para la parte secundaria del codigo-->
             <aside>
@@ -115,5 +143,7 @@
         </section>
         <!--se agrego un footer-->
         <footer>"Dibuja sonrisas, pinta alegría y deja huella en el mundo, una piedra a la vez."</footer>
+      <!-- Se carga el archivo JS -->
+    <script src="../colaborativo2b1/JS/FORM.JS"></script>
     </body>
 </html>
